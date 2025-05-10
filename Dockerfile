@@ -64,6 +64,7 @@ ENV XDEBUG_MODE=off
 ENV FRANKENPHP_WORKER_CONFIG=watch
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+RUN composer require --dev symfony/maker-bundle
 
 RUN set -eux; \
 	install-php-extensions \
