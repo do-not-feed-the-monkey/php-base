@@ -14,4 +14,6 @@ interface EventRepositoryInterface
     public function getAll(): array;
 
     public function save(Event $event): void;
+
+    public function getOldestUnqualifiedEvent(): ?Event;
 }

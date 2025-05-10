@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Entity\Enum\EventSentiment;
 use App\Entity\Enum\EventWeight;
 use App\Repository\EventRepository;
 use Doctrine\Common\Collections\Collection;
@@ -31,8 +30,6 @@ class Event
          */
         #[ORM\Column(type: Types::INTEGER, enumType: EventWeight::class)]
         private EventWeight $weight = EventWeight::WEIGHT_0,
-        #[ORM\Column(type: Types::INTEGER, enumType: EventSentiment::class)]
-        private EventSentiment $sentiment = EventSentiment::SENTIMENT_0,
         #[ORM\Column(nullable: true)]
         private ?float $location_x = null,
         #[ORM\Column(nullable: true)]
@@ -42,7 +39,9 @@ class Event
         #[ORM\Column(nullable: true)]
         private ?\DateTimeImmutable $startedAt = null,
         #[ORM\Column]
-        private \DateTimeImmutable $created_at = new \DateTimeImmutable(),
+        private \DateTimeImmutable $createdAt = new \DateTimeImmutable(),
+        #[ORM\OneToOne(inversedBy: 'event', cascade: ['persist', 'remove'])]
+        private ?EventSentiment $sentiment = null,
     ) {
     }
 
@@ -104,22 +103,12 @@ class Event
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): void
+    public function setCreatedAt(\DateTimeImmutable $createdAt): void
     {
-        $this->created_at = $created_at;
-    }
-
-    public function getSentiment(): EventSentiment
-    {
-        return $this->sentiment;
-    }
-
-    public function setSentiment(EventSentiment $sentiment): void
-    {
-        $this->sentiment = $sentiment;
+        $this->createdAt = $createdAt;
     }
 
     public function getLocationX(): ?float
@@ -170,5 +159,15 @@ class Event
     public function setAcknowledged(bool $acknowledged): void
     {
         $this->acknowledged = $acknowledged;
+    }
+
+    public function getSentiment(): ?EventSentiment
+    {
+        return $this->sentiment;
+    }
+
+    public function setSentiment(EventSentiment $sentiment): void
+    {
+        $this->sentiment = $sentiment;
     }
 }

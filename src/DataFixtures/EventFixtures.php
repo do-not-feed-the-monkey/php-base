@@ -29,9 +29,6 @@ class EventFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $this->loadWarsawEvent($manager);
-        $this->loadKrakowEvent($manager);
-        $this->loadGdanskEvent($manager);
-        $this->loadKatowiceEvent($manager);
     }
 
     public function loadWarsawEvent(ObjectManager $objectManager): void
@@ -75,80 +72,5 @@ class EventFixtures extends Fixture
 
         $objectManager->persist($event);
         $objectManager->flush();
-    }
-
-    private function loadKrakowEvent(ObjectManager $manager): void
-    {
-        $news = new ArrayCollection([
-            new News($this->uuidGenerator->generate(), 'Large protest in Kraków Main Square', null, new \DateTimeImmutable('2024-05-09 15:00:00')),
-            new News($this->uuidGenerator->generate(), 'Police forming barriers near Town Hall Tower.', null, new \DateTimeImmutable('2024-05-09 15:10:00')),
-        ]);
-
-        $event = new Event(
-            new Uuid(self::KRAKOW_EVENT_ID),
-            'Protest in Kraków city center',
-            'Crowds gathered in Main Square demanding government reform. Authorities responding to control the situation.',
-            false,
-            $news,
-            EventWeight::WEIGHT_7,
-            EventSentiment::SENTIMENT_6,
-            50.061947,
-            19.936856,
-            0.48,
-            new \DateTimeImmutable('2024-05-09 15:00:00'),
-        );
-
-        $manager->persist($event);
-        $manager->flush();
-    }
-
-    private function loadGdanskEvent(ObjectManager $manager): void
-    {
-        $news = new ArrayCollection([
-            new News($this->uuidGenerator->generate(), 'Explosion at shipyard heard across Gdańsk!', null, new \DateTimeImmutable('2024-05-08 08:42:00')),
-            new News($this->uuidGenerator->generate(), 'Several ambulances rushed to the port.', null, new \DateTimeImmutable('2024-05-08 08:45:30')),
-        ]);
-
-        $event = new Event(
-            new Uuid(self::GDANSK_EVENT_ID),
-            'Explosion in Gdańsk shipyard',
-            'Unconfirmed reports of an explosion in the shipyard district. Emergency response teams on site.',
-            false,
-            $news,
-            EventWeight::WEIGHT_8,
-            EventSentiment::SENTIMENT_8,
-            54.360214,
-            18.649378,
-            0.62,
-            new \DateTimeImmutable('2024-05-08 08:42:00'),
-        );
-
-        $manager->persist($event);
-        $manager->flush();
-    }
-
-    private function loadKatowiceEvent(ObjectManager $manager): void
-    {
-        $news = new ArrayCollection([
-            new News($this->uuidGenerator->generate(), 'Panic during concert at Spodek Arena.', null, new \DateTimeImmutable('2024-05-07 21:10:00')),
-            new News($this->uuidGenerator->generate(), 'People stampeding to exits after fire alarm.', null, new \DateTimeImmutable('2024-05-07 21:12:00')),
-        ]);
-
-        $event = new Event(
-            new Uuid(self::KATOWICE_EVENT_ID),
-            'Evacuation during Katowice concert',
-            'Fire alarm caused chaos during major concert at Spodek. Injuries reported from stampede.',
-            false,
-            $news,
-            EventWeight::WEIGHT_6,
-            EventSentiment::SENTIMENT_7,
-            50.264892,
-            19.021504,
-            0.39,
-            new \DateTimeImmutable('2024-05-07 21:10:00'),
-        );
-
-        $manager->persist($event);
-        $manager->flush();
     }
 }
