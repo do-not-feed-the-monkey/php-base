@@ -11,7 +11,6 @@ final readonly class GetEventsResponseItem
         public string $title,
         public string $description,
         public int $weight,
-        public int $sentiment,
         public ?string $startedAt,
         public string $createdAt,
         public int $newsCount,

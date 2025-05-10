@@ -12,6 +12,7 @@ readonly class GetEventResponseFactory implements GetEventResponseFactoryInterfa
 {
     public function __construct(
         private GetEventResponseNewsFactoryInterface $getEventResponseNewsFactory,
+        private GetEventResponseSentimentFactoryInterface $eventResponseSentimentFactory,
     ) {
     }
 
@@ -24,13 +25,13 @@ readonly class GetEventResponseFactory implements GetEventResponseFactoryInterfa
         );
 
         return new GetEventResponse(
-            (string) $event->getId(),
+            (string)$event->getId(),
             $event->getTitle(),
             $event->getDescription(),
             $event->getWeight()->value,
-            $event->getSentiment()->value,
             DateFormatter::formatNullable($event->getStartedAt()),
             DateFormatter::format($event->getCreatedAt()),
+            $this->eventResponseSentimentFactory->create($event->getSentiment()),
             $news,
         );
     }

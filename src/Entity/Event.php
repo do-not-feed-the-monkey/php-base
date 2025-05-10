@@ -23,6 +23,8 @@ class Event
         private string $description,
         #[ORM\Column(type: Types::BOOLEAN, options: ['default' => false])]
         private bool $acknowledged,
+        #[ORM\Column]
+        private string $category,
         #[ORM\ManyToMany(targetEntity: News::class, inversedBy: 'events', cascade: ['persist', 'remove'])]
         private Collection $news,
         /**
@@ -169,5 +171,15 @@ class Event
     public function setSentiment(EventSentiment $sentiment): void
     {
         $this->sentiment = $sentiment;
+    }
+
+    public function getCategory(): string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(string $category): void
+    {
+        $this->category = $category;
     }
 }

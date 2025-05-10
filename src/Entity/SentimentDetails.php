@@ -9,7 +9,7 @@ use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: SentimentDetailsRepository::class)]
-readonly class SentimentDetails
+class SentimentDetails
 {
     public function __construct(
         #[ORM\Id]

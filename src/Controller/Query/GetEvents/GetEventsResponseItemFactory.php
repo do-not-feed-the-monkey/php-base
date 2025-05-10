@@ -22,7 +22,6 @@ readonly class GetEventsResponseItemFactory implements GetEventsResponseItemFact
             $event->getTitle(),
             $event->getDescription(),
             $event->getWeight()->value,
-            $event->getSentiment()->value,
             DateFormatter::formatNullable($event->getStartedAt()),
             DateFormatter::format($event->getCreatedAt()),
             $this->newsRepository->countByEvent($event),

@@ -13,18 +13,18 @@ class EventSentiment
     public function __construct(
         #[ORM\Id]
         #[ORM\Column(type: UuidType::NAME, unique: true)]
-        private readonly Uuid $id,
+        private Uuid $id,
         #[ORM\OneToOne(mappedBy: 'sentiment', cascade: ['persist', 'remove'])]
         private readonly Event $event,
         #[ORM\OneToOne(cascade: ['persist', 'remove'])]
         #[ORM\JoinColumn(nullable: false)]
-        private ?SentimentDetails $agitation = null,
+        private SentimentDetails $agitation,
         #[ORM\OneToOne(cascade: ['persist', 'remove'])]
         #[ORM\JoinColumn(nullable: false)]
-        private ?SentimentDetails $neutral = null,
+        private SentimentDetails $neutral,
         #[ORM\OneToOne(cascade: ['persist', 'remove'])]
         #[ORM\JoinColumn(nullable: false)]
-        private ?SentimentDetails $positive = null,
+        private SentimentDetails $positive,
     ) {
         $this->event->setSentiment($this);
     }
@@ -39,17 +39,17 @@ class EventSentiment
         return $this->event;
     }
 
-    public function getAgitation(): ?SentimentDetails
+    public function getAgitation(): SentimentDetails
     {
         return $this->agitation;
     }
 
-    public function getNeutral(): ?SentimentDetails
+    public function getNeutral(): SentimentDetails
     {
         return $this->neutral;
     }
 
-    public function getPositive(): ?SentimentDetails
+    public function getPositive(): SentimentDetails
     {
         return $this->positive;
     }
