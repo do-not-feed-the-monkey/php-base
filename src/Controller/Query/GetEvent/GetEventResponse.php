@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\GetEvent;
+namespace App\Controller\Query\GetEvent;
 
 
 use App\Controller\Shared\ResponseInterface;

@@ -12,4 +12,6 @@ interface EventRepositoryInterface
      * @return Event[]
      */
     public function getAll(): array;
+
+    public function save(Event $event): void;
 }

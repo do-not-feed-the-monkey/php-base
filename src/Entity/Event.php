@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Entity\Enum\EventSentiment;
 use App\Entity\Enum\EventWeight;
 use App\Repository\EventRepository;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -23,6 +22,8 @@ class Event
         private string $title,
         #[ORM\Column(type: Types::TEXT)]
         private string $description,
+        #[ORM\Column(type: Types::BOOLEAN, options: ['default' => false])]
+        private bool $acknowledged,
         #[ORM\ManyToMany(targetEntity: News::class, inversedBy: 'events', cascade: ['persist', 'remove'])]
         private Collection $news,
         /**
@@ -159,5 +160,15 @@ class Event
     public function setStartedAt(?\DateTimeImmutable $startedAt): void
     {
         $this->startedAt = $startedAt;
+    }
+
+    public function isAcknowledged(): bool
+    {
+        return $this->acknowledged;
+    }
+
+    public function setAcknowledged(bool $acknowledged): void
+    {
+        $this->acknowledged = $acknowledged;
     }
 }

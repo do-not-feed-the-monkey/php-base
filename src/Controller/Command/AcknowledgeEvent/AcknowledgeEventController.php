@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\GetEvent;
+namespace App\Controller\Command\AcknowledgeEvent;
 
 use App\Controller\Shared\ResponseFactory;
 use App\Entity\Event;
@@ -11,19 +11,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
-class GetEventController extends AbstractController
+class AcknowledgeEventController extends AbstractController
 {
     public function __construct(
+        private readonly EventRepositoryInterface $eventRepository,
         private readonly ResponseFactory $responseFactory,
-        private readonly GetEventResponseFactoryInterface $getEventsResponseItemFactory,
     ) {
     }
 
-    #[Route(path: '/api/events/{id}', name: 'get_event', methods: ['GET'])]
+    #[Route('/api/events/{id}/ack', name: 'acknowledge_event', methods: ['PATCH'])]
     public function __invoke(Event $event): JsonResponse
     {
-        $response = $this->getEventsResponseItemFactory->create($event);
+        $event->setAcknowledged(true);
 
-        return $this->responseFactory->ok($response);
+        $this->eventRepository->save($event);
+
+        return $this->responseFactory->accepted();
     }
 }

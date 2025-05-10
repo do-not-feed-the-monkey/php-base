@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\GetEvent;
+namespace App\Controller\Query\GetEvent;
 
 final readonly class GetEventResponseNewsItem
 {

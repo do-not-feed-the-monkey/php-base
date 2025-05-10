@@ -50,4 +50,10 @@ class EventRepository extends ServiceEntityRepository implements EventRepository
 
         return $result;
     }
+
+    public function save(Event $event): void
+    {
+        $this->getEntityManager()->persist($event);
+        $this->getEntityManager()->flush();
+    }
 }

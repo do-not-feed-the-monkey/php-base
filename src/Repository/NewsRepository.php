@@ -31,7 +31,11 @@ class NewsRepository extends ServiceEntityRepository implements NewsRepositoryIn
         return $result;
     }
 
-
+    public function save(News $news): void
+    {
+        $this->getEntityManager()->persist($news);
+        $this->getEntityManager()->flush();
+    }
 
     //    /**
     //     * @return News[] Returns an array of News objects
