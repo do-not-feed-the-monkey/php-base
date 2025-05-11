@@ -37,28 +37,23 @@ class NewsRepository extends ServiceEntityRepository implements NewsRepositoryIn
         $this->getEntityManager()->flush();
     }
 
-    //    /**
-    //     * @return News[] Returns an array of News objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('n')
-    //            ->andWhere('n.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('n.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    public function getAverageNumberOfNewsPerEvent(): int
+    {
+        $conn = $this->getEntityManager()->getConnection();
 
-    //    public function findOneBySomeField($value): ?News
-    //    {
-    //        return $this->createQueryBuilder('n')
-    //            ->andWhere('n.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        $sql = '
+            SELECT AVG(news_count) as avg_news_per_event
+            FROM (
+                SELECT COUNT(news_id) as news_count
+                FROM event e
+                LEFT JOIN event_news n ON n.event_id = e.id
+                GROUP BY e.id
+            ) as sub';
+
+        $stmt = $conn->executeQuery($sql);
+        /** @var int $avg */
+        $avg = $stmt->fetchOne();
+
+        return $avg;
+    }
 }

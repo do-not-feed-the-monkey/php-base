@@ -44,6 +44,10 @@ class Event
         private \DateTimeImmutable $createdAt = new \DateTimeImmutable(),
         #[ORM\OneToOne(inversedBy: 'event', cascade: ['persist', 'remove'])]
         private ?EventSentiment $sentiment = null,
+        #[ORM\Column(type: Types::TEXT, nullable: true)]
+        private ?string $expertComment = null,
+        #[ORM\Column(type: Types::TEXT, nullable: true)]
+        private ?string $officialAnnouncement = null,
     ) {
     }
 
@@ -181,5 +185,25 @@ class Event
     public function setCategory(string $category): void
     {
         $this->category = $category;
+    }
+
+    public function getExpertComment(): ?string
+    {
+        return $this->expertComment;
+    }
+
+    public function setExpertComment(?string $expertComment): void
+    {
+        $this->expertComment = $expertComment;
+    }
+
+    public function getOfficialAnnouncement(): ?string
+    {
+        return $this->officialAnnouncement;
+    }
+
+    public function setOfficialAnnouncement(?string $officialAnnouncement): void
+    {
+        $this->officialAnnouncement = $officialAnnouncement;
     }
 }

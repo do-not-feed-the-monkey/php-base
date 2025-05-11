@@ -36,7 +36,9 @@ class EventFixtures extends Fixture
                 $event['description'],
                 false,
                 $event['category'],
-                $news
+                $news,
+                expertComment: $event['expertComment'],
+                officialAnnouncement: $event['officialAnnouncement'],
             );
 
             $sentiment = $this->createSentiment($eventEntity, $event['sentiment']);

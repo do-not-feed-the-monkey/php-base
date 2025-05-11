@@ -12,4 +12,6 @@ interface NewsRepositoryInterface
     public function countByEvent(Event $event): int;
 
     public function save(News $news): void;
+
+    public function getAverageNumberOfNewsPerEvent(): int;
 }

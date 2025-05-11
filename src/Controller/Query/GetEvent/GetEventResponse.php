@@ -20,6 +20,8 @@ final readonly class GetEventResponse implements ResponseInterface
         public ?string $startedAt,
         public string $createdAt,
         public ?GetEventResponseSentiment $eventSentiment,
+        public ?string $expertComment,
+        public ?string $officialAnnouncement,
         array $news,
     ) {
         $this->news = $news;

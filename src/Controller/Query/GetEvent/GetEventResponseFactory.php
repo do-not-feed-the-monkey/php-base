@@ -6,6 +6,7 @@ namespace App\Controller\Query\GetEvent;
 
 use App\Entity\Event;
 use App\Entity\News;
+use App\Service\WeightCalculatorInterface;
 use App\Shared\DateFormatter;
 
 readonly class GetEventResponseFactory implements GetEventResponseFactoryInterface
@@ -13,6 +14,7 @@ readonly class GetEventResponseFactory implements GetEventResponseFactoryInterfa
     public function __construct(
         private GetEventResponseNewsFactoryInterface $getEventResponseNewsFactory,
         private GetEventResponseSentimentFactoryInterface $eventResponseSentimentFactory,
+        private WeightCalculatorInterface $weightCalculator,
     ) {
     }
 
@@ -28,10 +30,15 @@ readonly class GetEventResponseFactory implements GetEventResponseFactoryInterfa
             (string)$event->getId(),
             $event->getTitle(),
             $event->getDescription(),
-            $event->getWeight()->value,
+            $this->weightCalculator->calculate(
+                $event->getNews()->count(),
+                $event->getSentiment(),
+            )->value,
             DateFormatter::formatNullable($event->getStartedAt()),
             DateFormatter::format($event->getCreatedAt()),
             $this->eventResponseSentimentFactory->create($event->getSentiment()),
+            $event->getExpertComment(),
+            $event->getOfficialAnnouncement(),
             $news,
         );
     }
