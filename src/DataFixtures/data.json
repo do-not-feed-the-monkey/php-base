@@ -1,6 +1,196 @@
 {
   "events": [
     {
+      "title": "Blackout w Hiszpanii",
+      "description": "Nagła awaria zasilania dotknęła znaczną część Hiszpanii, powodując chaos i utrudnienia w wielu sektorach.",
+      "startedAt": "2025-05-11 09:30:00",
+      "expertComment": null,
+      "officialAnnouncement": null,
+      "category": "Bezpieczeństwo i kryzysy",
+      "news": [
+        {
+          "content": "PILNE: Ogromny blackout w Hiszpanii! Miliony ludzi bez prądu. Sytuacja dynamiczna. #Hiszpania #Blackout",
+          "title": "Ogólnokrajowy blackout",
+          "publishedAt": "2025-05-11 09:35:00"
+        },
+        {
+          "content": "Chaos na drogach po nagłym braku zasilania sygnalizacji świetlnej w wielu miastach Hiszpanii. Apel o ostrożność! #HiszpaniaBlackout #UtrudnieniaWRuchu",
+          "title": "Paraliż komunikacyjny",
+          "publishedAt": "2025-05-11 09:40:00"
+        },
+        {
+          "content": "Mieszkańcy Madrytu i Barcelony informują o nagłym zaniku prądu. Nie działają telefony stacjonarne. #BlackoutHiszpania #Madryt #Barcelona",
+          "title": "Relacje z miast",
+          "publishedAt": "2025-05-11 09:45:00"
+        },
+        {
+          "content": "Służby ratunkowe w Hiszpanii pracują na pełnych obrotach. Odnotowano wzrost liczby zgłoszeń o uwięzionych w windach. #Blackout #SluzbyRatunkowe",
+          "title": "Akcja służb",
+          "publishedAt": "2025-05-11 09:50:00"
+        },
+        {
+          "content": "Rząd Hiszpanii wydał oświadczenie w sprawie blackoutu. Trwa ustalanie przyczyn awarii. Więcej informacji wkrótce. #Hiszpania #OswiadczenieRzadu",
+          "title": "Komunikat rządu",
+          "publishedAt": "2025-05-11 09:55:00"
+        },
+        {
+          "content": "Lotniska w Hiszpanii odnotowują opóźnienia lotów z powodu braku prądu. Pasażerowie proszeni o sprawdzanie statusu lotów. #BlackoutLotniska #Opóźnienia",
+          "title": "Utrudnienia w transporcie lotniczym",
+          "publishedAt": "2025-05-11 10:00:00"
+        },
+        {
+          "content": "Szpitale pracują na generatorach awaryjnych, ale sytuacja jest napięta. Apel o rozsądne korzystanie z energii po przywróceniu zasilania. #BlackoutSzpitale #Apel",
+          "title": "Sytuacja w szpitalach",
+          "publishedAt": "2025-05-11 10:05:00"
+        },
+        {
+          "content": "Eksperci spekulują na temat przyczyn blackoutu w Hiszpanii. Czy doszło do awarii sieci przesyłowej? #BlackoutPrzyczyny #Spekulacje",
+          "title": "Poszukiwanie przyczyn awarii",
+          "publishedAt": "2025-05-11 10:10:00"
+        },
+        {
+          "content": "Lokalne media informują o panice w niektórych sklepach. Ludzie wykupują wodę i żywność. #BlackoutHiszpania #Panika",
+          "title": "Reakcje społeczne",
+          "publishedAt": "2025-05-11 10:15:00"
+        },
+        {
+          "content": "Operator sieci energetycznej w Hiszpanii zapewnia, że pracuje nad jak najszybszym przywróceniem zasilania. #BlackoutOperator #PraceNaprawcze",
+          "title": "Działania operatora",
+          "publishedAt": "2025-05-11 10:20:00"
+        },
+        {
+          "content": "Blackout w Hiszpanii dotknął również sieci komórkowe. Utrudniona komunikacja. #BlackoutKomunikacja #ProblemyZSiecią",
+          "title": "Problemy z łącznością",
+          "publishedAt": "2025-05-11 10:25:00"
+        },
+        {
+          "content": "Wiele firm i przedsiębiorstw w Hiszpanii musiało wstrzymać działalność z powodu braku prądu. Straty ekonomiczne mogą być ogromne. #BlackoutGospodarka #Straty",
+          "title": "Wpływ na gospodarkę",
+          "publishedAt": "2025-05-11 10:30:00"
+        },
+        {
+          "content": "Turyści w Hiszpanii również odczuwają skutki blackoutu. Nieczynne atrakcje, problemy z transportem. #BlackoutTurystyka #UtrudnieniaDlaTurystów",
+          "title": "Sytuacja turystów",
+          "publishedAt": "2025-05-11 10:35:00"
+        },
+        {
+          "content": "Mieszkańcy solidaryzują się i pomagają sobie nawzajem w trudnej sytuacji spowodowanej blackoutem. #Solidarnosc #PomocSasiadecka",
+          "title": "Akt solidarności",
+          "publishedAt": "2025-05-11 10:40:00"
+        },
+        {
+          "content": "Sytuacja w hiszpańskich szpitalach powoli się stabilizuje dzięki działaniu generatorów. Personel medyczny dokłada wszelkich starań. #Szpitale #Stabilizacja",
+          "title": "Poprawa w szpitalach",
+          "publishedAt": "2025-05-11 10:45:00"
+        },
+        {
+          "content": "Policja apeluje o zachowanie spokoju i unikanie niepotrzebnych podróży podczas trwającego blackoutu. #PolicjaApeluje #Bezpieczenstwo",
+          "title": "Apel policji",
+          "publishedAt": "2025-05-11 10:50:00"
+        },
+        {
+          "content": "Operator sieci energetycznej informuje o postępach w przywracaniu zasilania w niektórych regionach Hiszpanii. #PrzywracanieZasilania #Postepy",
+          "title": "Pierwsze oznaki poprawy",
+          "publishedAt": "2025-05-11 10:55:00"
+        },
+        {
+          "content": "Ministerstwo Energii zapowiada dochodzenie w sprawie przyczyn tak rozległego blackoutu. #Dochodzenie #MinisterstwoEnergii",
+          "title": "Śledztwo w sprawie awarii",
+          "publishedAt": "2025-05-11 11:00:00"
+        },
+        {
+          "content": "Eksperci ds. cyberbezpieczeństwa sprawdzają, czy blackout nie był wynikiem ataku hakerskiego. #Cyberbezpieczenstwo #AtakHakerski",
+          "title": "Wątek cyberataku",
+          "publishedAt": "2025-05-11 11:05:00"
+        },
+        {
+          "content": "Wiele osób utknęło w windach. Służby ratunkowe intensywnie pracują nad ich uwolnieniem. #UwiezieniWWindach #AkcjaRatunkowa",
+          "title": "Uwięzieni w windach",
+          "publishedAt": "2025-05-11 11:10:00"
+        },
+        {
+          "content": "Lokalne inicjatywy pomocy są organizowane w wielu miastach. Ludzie oferują schronienie i pomoc sąsiadom. #PomocLokalna #InicjatywyObywatelskie",
+          "title": "Oddolna pomoc",
+          "publishedAt": "2025-05-11 11:15:00"
+        },
+        {
+          "content": "Operator sieci energetycznej podał szacowany czas całkowitego przywrócenia zasilania. To może potrwać kilka godzin. #CzasPrzywrócenia #Informacje",
+          "title": "Prognozy przywrócenia zasilania",
+          "publishedAt": "2025-05-11 11:20:00"
+        },
+        {
+          "content": "Blackout w Hiszpanii przypomina o znaczeniu niezawodnej infrastruktury energetycznej. #InfrastrukturaKrytyczna #BezpieczenstwoEnergetyczne",
+          "title": "Refleksje na temat infrastruktury",
+          "publishedAt": "2025-05-11 11:25:00"
+        },
+        {
+          "content": "Niektóre regiony Hiszpanii odzyskały już zasilanie. Informacje o postępach są na bieżąco aktualizowane. #ZasilaniePrzywrócone #Aktualizacje",
+          "title": "Powrót prądu",
+          "publishedAt": "2025-05-11 11:30:00"
+        },
+        {
+          "content": "Eksperci radzą, jak zachować bezpieczeństwo podczas blackoutu. Unikaj otwartego ognia, miej przy sobie latarkę i naładowany powerbank. #Porady #BezpieczenstwoPodczasBlackoutu",
+          "title": "Porady bezpieczeństwa",
+          "publishedAt": "2025-05-11 11:35:00"
+        },
+        {
+          "content": "Międzynarodowe media informują o rozległym blackoutcie w Hiszpanii. Sytuacja budzi niepokój w Europie. #WiadomosciZeSwiata #BlackoutWEuropie",
+          "title": "Reakcje międzynarodowe",
+          "publishedAt": "2025-05-11 11:40:00"
+        },
+        {
+          "content": "Rząd apeluje o cierpliwość i wyrozumiałość. Służby robią wszystko, co w ich mocy, aby jak najszybciej rozwiązać problem. #ApelRzadu #Cierpliwosc",
+          "title": "Apel o spokój",
+          "publishedAt": "2025-05-11 11:45:00"
+        },
+        {
+          "content": "Organizacje pozarządowe włączają się w pomoc osobom najbardziej dotkniętym skutkami blackoutu. #PomocNGO #Wsparcie",
+          "title": "Zaangażowanie organizacji pozarządowych",
+          "publishedAt": "2025-05-11 11:50:00"
+        },
+        {
+          "content": "Coraz więcej regionów Hiszpanii odzyskuje zasilanie. Optymistyczne wieści z terenu. #PowrotDoNormalnosci #DobreWiadomosci",
+          "title": "Nadzieja na szybki koniec blackoutu",
+          "publishedAt": "2025-05-11 11:55:00"
+        },
+        {
+          "content": "Operator sieci energetycznej przeprasza za utrudnienia spowodowane blackoutem i dziękuje za wyrozumiałość. #Przeprosiny #Podziekowania",
+          "title": "Przeprosiny operatora",
+          "publishedAt": "2025-05-11 12:00:00"
+        }
+      ],
+      "sentiment": {
+        "agitation": {
+          "strength": 50,
+          "detectedEmotions": [
+            "anxiety",
+            "panic",
+            "concern",
+            "frustration",
+            "urgency"
+          ]
+        },
+        "neutral": {
+          "strength": 35,
+          "detectedEmotions": [
+            "informative",
+            "cautious",
+            "alertness",
+            "responsibility"
+          ]
+        },
+        "positive": {
+          "strength": 15,
+          "detectedEmotions": [
+            "solidarity",
+            "hope",
+            "gratitude",
+            "reassurance"
+          ]
+        }
+      }
+    },
+    {
       "title": "Wybór nowego papieża: Kardynał Robert Prevost zostaje papieżem Leonem XIV!",
       "description": "Sensacja w Watykanie! Amerykański kardynał Robert Prevost został wybrany na papieża i przyjął imię Leon XIV. To pierwszy papież z USA w historii Kościoła katolickiego! Jakie zmiany przyniesie jego pontyfikat?",
       "expertComment": null,
